@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="j316.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Senden">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="38.0" layoutY="14.0" text="&quot;Lobe den HERN meine Seele&quot; Ps. 103,2">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                         <HBox layoutX="23.0" layoutY="60.0" prefHeight="40.0" prefWidth="354.0">
+                             <Button mnemonicParsing="false" onAction="#textTemplateLHI" text="LH I" />
+                             <Button mnemonicParsing="false" onAction="#textTemplateLHII" text="LH II" />
+                             <Button mnemonicParsing="false" onAction="#textTemplateLHIII" text="LH III" />
+                             <Button mnemonicParsing="false" onAction="#textTemplateCHI" text="CH I" />
+                             <Button mnemonicParsing="false" onAction="#textTemplateCHII" text="CH II" />
+                             <Button mnemonicParsing="false" onAction="#textTemplateCHII" text="CH III" />
+                             <Button mnemonicParsing="false" onAction="#textTemplateSdH" text="SdH" />
+
+                         </HBox>
+                        <TextField fx:id="txtSend" layoutX="23.0" layoutY="101.0" prefHeight="27.0" prefWidth="279.0" promptText="Text zum senden" text="LH II 13">
+                           <font>
+                              <Font name="Courier New Bold" size="25.0" />
+                           </font></TextField>
+                        <Button fx:id="btnSenden" defaultButton="true" layoutX="314.0" layoutY="101.0" mnemonicParsing="false" onAction="#sendText" prefHeight="48.0" prefWidth="65.0" text="Senden" textFill="#d30a0a" />
+
+                         <Slider fx:id="sldLoben" blockIncrement="1.0" layoutX="22.0" layoutY="210.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="1" prefHeight="38.0" prefWidth="278.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" />
+                         <Button fx:id="btnHello" layoutX="23.0" layoutY="157.0" mnemonicParsing="false" onAction="#sendHello" prefHeight="27.0" text="Begrüßen" textFill="#1414d0" />
+                         <Button fx:id="btnAbschied" layoutX="110.0" layoutY="157.0" mnemonicParsing="false" onAction="#sendBye" prefHeight="27.0" text="Abschied" textFill="#791414" />
+                         <Button fx:id="btnVermeldung" layoutX="195.0" layoutY="157.0" mnemonicParsing="false" onAction="#sendVermeldung" prefHeight="27.0" text="Vermeldung" textFill="#1e9a06" />
+                         <Button fx:id="btnClear" layoutX="314.0" layoutY="157.0" mnemonicParsing="false" onAction="#sendClear" prefHeight="27.0" prefWidth="65.0" text="Leeren" textFill="#b50345" underline="true" />
+                         <Button fx:id="btnLoben" layoutX="314.0" layoutY="210.0" mnemonicParsing="false" onAction="#sendLoben" prefHeight="27.0" prefWidth="65.0" text="Loben" textFill="#1600f5">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+
+                         <Label layoutX="21.0" layoutY="266.0" prefHeight="17.0" prefWidth="95.0" text="Status" />
+                        <ScrollPane layoutX="21.0" layoutY="290.0" prefHeight="151.0" prefWidth="356.0">
+                          <content>
+                            <AnchorPane minHeight="0.0">
+                                 <children>
+                                    <Label fx:id="txtStatus" text="Ready" />
+                                 </children></AnchorPane>
+                          </content>
+                        </ScrollPane>
+
+
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Einstellungen">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <Label layoutX="21.0" layoutY="230.0" prefHeight="17.0" prefWidth="95.0" text="Verbindung" />
+                  <TextField fx:id="txtHost" layoutX="23.0" layoutY="45.0" prefHeight="27.0" prefWidth="349.0" promptText="IP" text="192.168.0.248" />
+                  <TextField fx:id="txtPort" layoutX="23.0" layoutY="85.0" prefHeight="27.0" prefWidth="349.0" promptText="Port" text="5005" />
+              </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</GridPane>
