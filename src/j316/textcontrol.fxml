@@ -76,7 +76,7 @@
           <Tab text="Einstellungen">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                  <Label layoutX="21.0" layoutY="230.0" prefHeight="17.0" prefWidth="95.0" text="Verbindung" />
+                  <Label layoutX="21.0" layoutY="15.0" prefHeight="17.0" prefWidth="95.0" text="Verbindung" />
                   <TextField fx:id="txtHost" layoutX="23.0" layoutY="45.0" prefHeight="27.0" prefWidth="349.0" promptText="IP" text="192.168.0.248" />
                   <TextField fx:id="txtPort" layoutX="23.0" layoutY="85.0" prefHeight="27.0" prefWidth="349.0" promptText="Port" text="5005" />
               </AnchorPane>
